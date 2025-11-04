@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile | LinkedIn Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-nav"><h2 class="nav-logo" onclick="goTo('feed.html')">Linked<span>In</span></h2></div>
+    <div class="center-nav">
+      <i class="bi bi-house-door-fill nav-icon" onclick="goTo('feed.html')"></i>
+      <i class="bi bi-people-fill nav-icon" onclick="goTo('network.html')"></i>
+      <i class="bi bi-briefcase-fill nav-icon" onclick="goTo('jobs.html')"></i>
+      <i class="bi bi-chat-dots-fill nav-icon" onclick="goTo('messages.html')"></i>
+      <i class="bi bi-bell-fill nav-icon" onclick="goTo('notifications.html')"></i>
+    </div>
+    <div class="right-nav">
+      <div class="profile-circle">👤</div>
+      <button class="mode-btn" onclick="toggleMode()">🌙</button>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <div class="profile-editor">
+      <div class="profile-photo big">👤</div>
+      <h2 id="pName">User</h2>
+      <p id="pEmail" class="muted"></p>
+
+      <label>Headline</label>
+      <input id="pHeadline" placeholder="e.g., Full Stack Developer"/>
+
+      <label>About</label>
+      <textarea id="pAbout" placeholder="Write about yourself..."></textarea>
+
+      <button class="btn-primary" onclick="saveProfile()">Save Profile</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
